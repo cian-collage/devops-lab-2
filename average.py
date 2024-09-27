@@ -4,6 +4,12 @@ def calculate_average(numbers):
         return 0  # Avoid division by zero
     return sum(numbers) / len(numbers)
 
+# Function to find the largest and smallest numbers
+def find_largest_and_smallest(numbers):
+    if len(numbers) == 0:
+        return None, None  # No numbers entered
+    return max(numbers), min(numbers)
+
 # Main program
 def main():
     numbers = []
@@ -33,11 +39,8 @@ def main():
             elif number < min:
                 min = num
 
-    # Calculate and display the average
-    average = calculate_average(numbers)
-    print(f"The average of the entered numbers is: {average}")
-    print(f"Max: {max}, Min: {min}")
 
 # Run the program
 if __name__ == "__main__":
     main()
+
